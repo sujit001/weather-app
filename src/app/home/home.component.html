@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="col-sm-12 text-center">
+            
+            <div *ngIf="userInput1">
+               <div class="input-group mt-5">
+                 <input class="form-control" type="text" #userInput placeholder="Enter city name">
+                    <div class="input-group-append">
+                  <button class="input-group-text btn btn-primary" (click)="getCity(userInput.value)">Search</button>
+              </div>
+            </div>
+         </div>
+         <div class="input-group mt-5">
+                <input class="form-control" type="text" #userInput1 placeholder="Enter number">
+                <div class="input-group-append">
+                    <button class="input-group-text btn btn-primary" (click)="getOutput(userInput1.value)">Submit</button>
+                </div>
+            </div>
+            <h5>current weather and forecasts in city..</h5>
+            <h2>Weather in {{weather.name}} {{weather.sys.country}}</h2>
+        </div>
+        <div class="col-sm-12">
+            <p class="text-uppercase font-italic font-weight-bold">
+              {{a}}
+            </p>
+        </div>
+        <!-- <div class="col-sm-12">
+            <p class="text-uppercase font-italic font-weight-bold">
+           {{b}}
+            </p>
+        </div>
+        <div class="col-sm-12">
+            <p class="text-uppercase font-italic font-weight-bold">
+            {{c}}
+            </p>
+        </div> -->
+       
+    </div>
+</div>
